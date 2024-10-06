@@ -33,7 +33,7 @@ class PlayerChar(Person):
         super().__init__(name, health, damage, armor)
 
 
-enemy_char = EnemyChar(name='golum', health=100, damage=20, armor=10)
+enemy_char = EnemyChar(name='Firamir', health=100, damage=20, armor=10)
 player_char = PlayerChar(name='Boromir', health=100, damage=20, armor=10)
 
 while player_char.is_alive() and enemy_char.is_alive():
