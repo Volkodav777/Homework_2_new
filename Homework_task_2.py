@@ -11,7 +11,7 @@ class Person:
 
     def attack(self, enemy):
         damage = self.__count_damage(enemy.armor) 
-        print(f'{self.name} атакует {enemy.name} и наносит {damage} урона!')  # Сообщение об атаке
+        print(f'{self.name} атакует {enemy.name} и наносит {damage} урона!')
         enemy.take_damage(damage)
 
     def take_damage(self, damage):
@@ -25,7 +25,6 @@ class Person:
 class EnemyChar(Person):
     def __init__(self, name, health, damage, armor):
         super().__init__(name, health, damage, armor)
-
 
 class PlayerChar(Person):
     def __init__(self, name, health, damage, armor):
