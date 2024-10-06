@@ -6,14 +6,13 @@ class Person:
         self.armor = armor
 
     def __count_damage(self, enemy_armor):
-        """Приватный метод для расчета урона с учётом брони противника"""
         damage_in_armor = self.damage - (enemy_armor * 0.5)
         return max(damage_in_armor, 0)
 
     def attack(self, enemy):
-        damage = self.__count_damage(enemy.armor)  # Считаем урон
+        damage = self.__count_damage(enemy.armor) 
         print(f'{self.name} атакует {enemy.name} и наносит {damage} урона!')  # Сообщение об атаке
-        enemy.take_damage(damage)  # Уменьшаем здоровье у противника
+        enemy.take_damage(damage)
 
     def take_damage(self, damage):
         self.health -= damage
